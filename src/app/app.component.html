@@ -129,14 +129,37 @@
 
 <!-- //// -->
 
-<button (click)="toogler = !toogler"> buutin</button>
+<!-- <button (click)="toogler = !toogler"> buutin</button>
 
 <p *ngIf="toogler">Lorem, ipsum dolor sit amet consect consequunturero, repellendus, esse aut veritatis expedita!</p>
 
 <ng-template [ngIf]="toogler">
   <p>text euebfef</p>
-</ng-template>
+</ng-template> -->
+
+<!-- if ,for ,switch -->
+
+<button (click)="toogler = !toogler"> buutin</button>
 
 
+<!-- 
+@if(toogler) {
+  <p style="color: red;" *ngIf="toogler">us, esse aut veritatis expedita!</p>
+} @else {
+  <p *ngIf="!toogler">Lorem, ipsum dolor sit amet consect consequunturero, repellendus, esse aut veritatis expedita!</p>
+} -->
 
 
+<div *ngFor="let item of arr; trackBy: someTrackMethods">
+  <span>{{item}}</span>
+</div>
+
+@for (item of arr; track $index) {
+  <div style="color: blue;">
+    <span>{{item}}</span>
+  </div>
+}
+
+
+<app-ng-content-example #confirmDialog (confirmed)="handleConfirm()"></app-ng-content-example>
+<button (click)="confirmDialog.openModal()">Delete File</button>

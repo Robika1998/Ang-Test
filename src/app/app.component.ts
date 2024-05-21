@@ -67,4 +67,15 @@ export class AppComponent {
   arr: any [] = ['text', 123, true, [1, 'abc'], NaN, Symbol]
 
 
+  someTrackMethods(index:number, item: any) {
+    console.log(1);
+
+    return
+    
+  }
+
+  handleConfirm() {
+    // Handle the deletion logic here
+    console.log('File has been deleted.');
+  }
 }
